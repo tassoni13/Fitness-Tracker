@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const Workout = require('../models/workout');
+const Workout = require('../models');
 
 //Gets all workouts
-router.get("/workouts", (req, res) => {
+router.get('/workouts', (req, res) => {
     Workout.aggregate([
         {
             $addFields: {
